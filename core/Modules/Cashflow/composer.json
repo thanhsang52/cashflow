@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/cashflow",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Cashflow\\": "",
+            "Modules\\Cashflow\\App\\": "app/",
+            "Modules\\Cashflow\\Database\\Factories\\": "database/factories/",
+            "Modules\\Cashflow\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Cashflow\\Tests\\": "tests/"
+        }
+    }
+}

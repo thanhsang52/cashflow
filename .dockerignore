@@ -1,0 +1,17 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+README.md
+.nyc_output
+coverage
+.cache
+Dockerfile
+.dockerignore
+core/vendor
+core/node_modules
+core/storage/logs
+core/storage/framework/cache
+core/storage/framework/sessions
+core/storage/framework/views
+core/tests

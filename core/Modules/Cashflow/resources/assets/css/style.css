@@ -1,0 +1,111 @@
+.billing-settings .form-control-sm {
+    border: 1px solid rgba(0,0,0,.15);
+}
+.select-modal-btn{
+    position: absolute;
+    top: 28px;
+    right:13px;
+    min-width: 120px;
+}
+a.showMore{
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    background-color: #0077C8;
+    padding: 10px 20px;
+    width: 132px;
+    text-align: center;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+a.showMore i{
+    font-size: 21px;
+    margin-left: 10px;
+}
+.scheduled-transactions-list {
+    columns: 3; /* Divide the list into two columns */
+    -webkit-columns: 3; /* For Safari and Chrome */
+    -moz-columns: 3; /* For Firefox */
+}
+
+.scheduled-transactions-list li {
+    break-inside: avoid; /* Avoid breaking list items between columns */
+    list-style-type: decimal;
+    list-style-position: inside;
+    
+}
+.scheduled-transactions-list li::marker {
+    font-weight: lighter;
+}
+.detail-information dt,.detail-information dd{
+    display:inline-block;
+    width: max-content;
+}
+.detail-information dt{
+    padding-right: 10px;
+}
+.detail-information dl{
+    margin-bottom: 0;
+}
+.conditions-group{
+    border: 1px dotted #CCC;
+    padding: 8px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.add-condition-items{
+    display: block;
+    text-align: center;
+}
+.remove-condition-group{
+    position: absolute;
+    top: -6px;
+    right: -2px;
+    font-size: 20px;
+}
+.condition-items{
+    border-bottom: dashed 1px #CCC;
+    margin-bottom: 12px;
+}
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1999;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+}
+.dataTables_length{
+    float:left;
+}
+.dataTable tr.selected{
+    background-color: #0cc2aa;
+    color: #FFF;
+}
+.select-modal-btn{
+    position: absolute;
+    top: 33px;
+    right:15px;
+    min-width: 120px;
+}
+.pagination{
+    margin-top:0 !important;
+    margin-right: 0 !important;
+}
+.add-condition-items{
+    background-color: rgba(120, 130, 140, 0.1);
+}
+.signature-pad--body {
+    border-radius: 4px;
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border: 1px solid #c0cbda;
+    width: fit-content;
+}

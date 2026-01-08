@@ -1,0 +1,30 @@
+<?php
+
+return array(
+    'sub_total'    => 'Thành tiền',
+    'product_discount' => 'Giảm giá sản phẩm',
+    'extra_discount' => 'Giảm thêm',
+    'coupon_discount'   => 'Mã giảm giá',
+    'tax' => 'Thuế',
+    'total' => 'Tổng cộng',
+    'cancel_order' => 'Huỷ đơn',
+    'place_order' => 'Đặt hàng',
+    'clear_cart' => 'Xoá giỏ hàng',
+    'new_order' => 'Tạo đơn mới',
+    'item' => 'Sản phẩm',
+    'qty' => 'Số lượng',
+    'price' => 'Đơn giá',
+    'delete' => 'Xoá',
+    'billing_section' =>'Thông tin thanh toán',
+    'customer' => 'Khách hàng',
+    'current_customer' => 'Khách hiện tại',
+    'clear_cart' => 'Xoá giỏ hàng',
+    'product_section' => 'Thông tin sản phẩm',
+    'search_by_code_or_name' => 'Tìm theo mã sản phẩm',
+    'search_by_customer_code' => 'Tìm theo mã CRM',
+    'open_terminal_register' => 'Mở ca mới',
+    'close_terminal_register' => 'Đóng ca',
+    'terminal_register' => 'Ca kíp',
+    'cash'  => 'Tiền mặt',
+);
+?>

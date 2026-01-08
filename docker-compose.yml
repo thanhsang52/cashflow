@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  cashflow-app:
+    build: .
+    container_name: cashflow-app
+    ports:
+      - "5002:80"
+    env_file:
+      - ./core/.env
+    volumes:
+      - ./core/storage:/var/www/html/core/storage
+      - ./uploads:/var/www/html/uploads
+    restart: unless-stopped
+    networks:
+      - cashflow-network
+
+  #SQL Server (nếu cần)
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: cashflow-mssql
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrong@Passw0rd
+    ports:
+      - "1433:1433"
+    # volumes:
+    #   - mssql_data:/var/opt/mssql
+    restart: unless-stopped
+    networks:
+      - cashflow-network
+
+networks:
+  cashflow-network:
+    driver: bridge
+
+# volumes:
+#   mssql_data:

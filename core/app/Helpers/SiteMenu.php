@@ -148,10 +148,10 @@ class SiteMenu
                             if ($f3c == "htt" || $f3c == "www") {
                                 $this_link_url = $link;
                             } else {
-                                $this_link_url = url(config('smartend.frontend_path').@Helper::currentLanguage()->code . "/" . $link);
+                                $this_link_url = url(@Helper::currentLanguage()->code . "/" . $link);
                             }
                         } else {
-                            $this_link_url = url(config('smartend.frontend_path').$link);
+                            $this_link_url = url($link);
                         }
                     }
                     $Links[] = [
@@ -177,10 +177,10 @@ class SiteMenu
                             if ($f3c == "htt" || $f3c == "www") {
                                 $this_link_url = $link;
                             } else {
-                                $this_link_url = url(config('smartend.frontend_path').@Helper::currentLanguage()->code . "/" . $link);
+                                $this_link_url = url(@Helper::currentLanguage()->code . "/" . $link);
                             }
                         } else {
-                            $this_link_url = url(config('smartend.frontend_path').$link);
+                            $this_link_url = url($link);
                         }
                     }
                     $Links[] = [

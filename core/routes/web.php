@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::Group(['prefix' => config('smartend.frontend_path')], function () {
+//Route::Group(['prefix' => config('smartend.frontend_path')], function () {
 // Language Route
 Route::post('/lang', [LanguageController::class, 'index'])->middleware('LanguageSwitcher')->name('lang');
 // For Language direct URL link
@@ -71,5 +71,5 @@ Route::get('/tag/{tag_slug?}', [HomeController::class, 'tag'])->name('tag');
 // - All Other slugs
 
     Route::get('/{part1?}/{part2?}/{part3?}/{part4?}/{part5?}/{part6?}', [HomeController::class, 'seo'])->name("frontendRoute");
-});
+//});
 // End of Frontend Route

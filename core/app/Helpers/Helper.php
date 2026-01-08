@@ -635,9 +635,9 @@ class Helper
             $lang_url = route("NotFound", ['lang' => $lang_code]);
         } elseif (@$page_type == "home") {
             if ($lang_code != config('smartend.default_language')) {
-                $lang_url = URL::to(config('smartend.frontend_path').$lang_code);
+                $lang_url = URL::to($lang_code);
             } else {
-                $lang_url = URL::to(config('smartend.frontend_path')."/");
+                $lang_url = URL::to("/");
             }
         }
         return $lang_url;
@@ -703,9 +703,9 @@ class Helper
                     $slug = Str::slug($WebmasterSection->$title_var, '-');
                 }
                 if ($lang != config('smartend.default_language')) {
-                    $section_url = url(config('smartend.frontend_path').$lang . "/" . $slug);
+                    $section_url = url($lang . "/" . $slug);
                 } else {
-                    $section_url = url(config('smartend.frontend_path').$slug);
+                    $section_url = url($slug);
                 }
             }
         } catch (\Exception $e) {
@@ -786,9 +786,9 @@ class Helper
                 } else {
                     // is level 1
                     if ($lang != config('smartend.default_language')) {
-                        $category_url = url(config('smartend.frontend_path').$lang . "/" . $WebmasterSection_slug . "/" . $cat_slug);
+                        $category_url = url($lang . "/" . $WebmasterSection_slug . "/" . $cat_slug);
                     } else {
-                        $category_url = url(config('smartend.frontend_path').$WebmasterSection_slug . "/" . $cat_slug);
+                        $category_url = url($WebmasterSection_slug . "/" . $cat_slug);
                     }
                 }
             }
@@ -821,9 +821,9 @@ class Helper
                 }
                 if ($Topic->webmaster_id == 1) {
                     if ($lang != config('smartend.default_language')) {
-                        $topic_url = url(config('smartend.frontend_path').$lang . "/" . $topic_slug);
+                        $topic_url = url($lang . "/" . $topic_slug);
                     } else {
-                        $topic_url = url(config('smartend.frontend_path').$topic_slug);
+                        $topic_url = url($topic_slug);
                     }
                     return $topic_url;
                 }
@@ -880,31 +880,31 @@ class Helper
                                 $cat1_slug = Str::slug($fatherSection1->$title_var, '-');
                             }
                             if ($lang != config('smartend.default_language')) {
-                                $topic_url = url(config('smartend.frontend_path').$lang . "/" . $WebmasterSection_slug . "/" . $cat1_slug . "/" . $cat2_slug . "/" . $cat_slug . "/" . $topic_slug);
+                                $topic_url = url($lang . "/" . $WebmasterSection_slug . "/" . $cat1_slug . "/" . $cat2_slug . "/" . $cat_slug . "/" . $topic_slug);
                             } else {
-                                $topic_url = url(config('smartend.frontend_path').$WebmasterSection_slug . "/" . $cat1_slug . "/" . $cat2_slug . "/" . $cat_slug . "/" . $topic_slug);
+                                $topic_url = url($WebmasterSection_slug . "/" . $cat1_slug . "/" . $cat2_slug . "/" . $cat_slug . "/" . $topic_slug);
                             }
                         } else {
                             // is level 2
                             if ($lang != config('smartend.default_language')) {
-                                $topic_url = url(config('smartend.frontend_path').$lang . "/" . $WebmasterSection_slug . "/" . $cat2_slug . "/" . $cat_slug . "/" . $topic_slug);
+                                $topic_url = url($lang . "/" . $WebmasterSection_slug . "/" . $cat2_slug . "/" . $cat_slug . "/" . $topic_slug);
                             } else {
-                                $topic_url = url(config('smartend.frontend_path').$WebmasterSection_slug . "/" . $cat2_slug . "/" . $cat_slug . "/" . $topic_slug);
+                                $topic_url = url($WebmasterSection_slug . "/" . $cat2_slug . "/" . $cat_slug . "/" . $topic_slug);
                             }
                         }
                     } else {
                         // is level 1
                         if ($lang != config('smartend.default_language')) {
-                            $topic_url = url(config('smartend.frontend_path').$lang . "/" . $WebmasterSection_slug . "/" . $cat_slug . "/" . $topic_slug);
+                            $topic_url = url($lang . "/" . $WebmasterSection_slug . "/" . $cat_slug . "/" . $topic_slug);
                         } else {
-                            $topic_url = url(config('smartend.frontend_path').$WebmasterSection_slug . "/" . $cat_slug . "/" . $topic_slug);
+                            $topic_url = url($WebmasterSection_slug . "/" . $cat_slug . "/" . $topic_slug);
                         }
                     }
                 } else {
                     if ($lang != config('smartend.default_language')) {
-                        $topic_url = url(config('smartend.frontend_path').$lang . "/" . $WebmasterSection_slug . "/" . $topic_slug);
+                        $topic_url = url($lang . "/" . $WebmasterSection_slug . "/" . $topic_slug);
                     } else {
-                        $topic_url = url(config('smartend.frontend_path').$WebmasterSection_slug . "/" . $topic_slug);
+                        $topic_url = url($WebmasterSection_slug . "/" . $topic_slug);
                     }
                 }
             }

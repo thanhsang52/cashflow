@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'backend_path' => env('BACKEND_PATH', ''),
+    'backend_path' => env('BACKEND_PATH', 'admin'),
     'frontend_path' => env('FRONTEND_PATH', ''),
     'default_language' => env('DEFAULT_LANGUAGE', 'en'),
     'mail_from_address' => env('MAIL_FROM_ADDRESS', 'email@site.com'),

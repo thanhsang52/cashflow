@@ -73,7 +73,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapDashboardRoutes()
     {
-        //Route::prefix(config('smartend.backend_path'))
+        Route::prefix(config('smartend.backend_path'));
         Route::middleware('auth')
             ->namespace($this->moduleNamespace)
             ->group(module_path('Cashflow', 'routes/dashboard.php'));

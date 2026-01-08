@@ -97,7 +97,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapDashboardRoutes()
     {
         //sang
-        Route::prefix(config('smartend.backend_path'))
+        Route::prefix(config('smartend.backend_path'));
         Route::middleware('auth')
             ->namespace($this->dashboardNamespace)
             ->group(base_path('routes/dashboard.php'));

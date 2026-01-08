@@ -24,6 +24,7 @@ use Modules\Cashflow\App\Http\Controllers\CashflowController;
 use Modules\Cashflow\App\Http\Controllers\CurrencyController;
 use Modules\Cashflow\App\Http\Controllers\VendorController;
 use Modules\Cashflow\App\Http\Controllers\TermController;
+Route::Group(['prefix' => config('smartend.backend_path')], function () {
 // Admin Home
 Route::get('/', [DashboardController::class, 'index'])->name('adminHome');
 //Search
@@ -304,3 +305,5 @@ Route::get('/cache-cleared', [DashboardController::class, 'cache_cleared'])->nam
 // logout
 Route::get('/logout', [DashboardController::class, 'logout'])->name('adminLogout');
 
+});
+// End of Backend Route

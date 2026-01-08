@@ -19,7 +19,7 @@ use Modules\Cashflow\App\Http\Controllers\NoteController;
 */
 
 
-
+Route::prefix(config('smartend.backend_path'))->group(function () {
 Route::prefix('cashflow')->as('cashflow.')->group(function () {
     Route::resource('currency',CurrencyController::class);
     Route::resource('vendors',VendorController::class);
@@ -79,4 +79,5 @@ Route::prefix('cashflow')->as('cashflow.')->group(function () {
         //Route::resource('order-detail','OrderLineController');
     });
     
+});
 });

@@ -41,7 +41,7 @@ RUN pecl install sqlsrv pdo_sqlsrv redis \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Tạo thư mục làm việc
-WORKDIR /var/www/html
+WORKDIR /var/www/html/cashflow
 
 # Copy composer files trước để tận dụng Docker cache
 COPY core/composer.json core/composer.lock ./core/
@@ -57,9 +57,9 @@ RUN mkdir -p core/storage/framework/{cache,sessions,views} \
     && mkdir -p core/bootstrap/cache
 
 # Thiết lập quyền
-RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html/core/storage \
-    && chmod -R 755 /var/www/html/core/bootstrap/cache
+RUN chown -R www-data:www-data /var/www/html/cashflow \
+    && chmod -R 755 /var/www/html/cashflow/core/storage \
+    && chmod -R 755 /var/www/html/cashflow/core/bootstrap/cache
 
 # Cấu hình Nginx
 COPY docker/nginx.conf /etc/nginx/sites-available/default

@@ -58,8 +58,8 @@ RUN mkdir -p core/storage/framework/{cache,sessions,views} \
 
 # Thiết lập quyền
 RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html/core/storage \
-    && chmod -R 755 /var/www/html/core/bootstrap/cache
+    && chmod -R 777 /var/www/html/core/storage \
+    && chmod -R 777 /var/www/html/core/bootstrap/cache
 
 # Cấu hình Nginx
 COPY docker/nginx.conf /etc/nginx/sites-available/default

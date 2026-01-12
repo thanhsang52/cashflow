@@ -57,7 +57,7 @@ RUN mkdir -p core/storage/framework/{cache,sessions,views} \
     && mkdir -p core/bootstrap/cache
 
 # Thiết lập quyền
-RUN chown -R www-data:www-data /var/www/html/cashflow \
+RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html/core/storage \
     && chmod -R 755 /var/www/html/core/bootstrap/cache
 

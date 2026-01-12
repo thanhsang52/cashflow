@@ -8,10 +8,10 @@ services:
       - "5002:80"
     env_file:
       - ./core/.env
-    # volumes:
-    #   - ./core/storage:/var/www/html/cashflow/core/storage
-    #   - ./uploads:/var/www/html/cashflow/uploads
-    #   - ./core/bootstrap/cache:/var/www/html/cashflow/core/bootstrap/cache
+    volumes:
+      - ./core/storage:/var/www/html/core/storage
+      - ./uploads:/var/www/html/uploads
+      - ./core/bootstrap:/var/www/html/core/bootstrap
     restart: unless-stopped
     networks:
       - cashflow-network

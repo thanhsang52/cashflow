@@ -9,8 +9,8 @@ services:
     env_file:
       - ./core/.env
     volumes:
-      - ./core/storage:/var/www/html/cashflow/core/storage
-      - ./uploads:/var/www/html/cashflow/uploads
+      - ./core/storage:/var/www/html/core/storage
+      - ./uploads:/var/www/html/uploads
     restart: unless-stopped
     networks:
       - cashflow-network
